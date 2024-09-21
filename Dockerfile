@@ -6,7 +6,7 @@ COPY . .
 # STEP2: BUILD THE FRONTEND
 FROM node:18-alpine AS builder_frontend
 WORKDIR /home/
-COPY --from=builder_prepare /home/filestash/ ./
+COPY --from=builder_prepare /home/ ./
 RUN apk add make git gzip brotli yarn && \
     yarn && \
     make build_frontend && \
