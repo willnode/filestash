@@ -8,6 +8,7 @@ require (
 	cloud.google.com/go/storage v1.41.0
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.3.2
 	github.com/aws/aws-sdk-go v1.53.14
+	github.com/bluekeyes/go-gitdiff v0.7.3
 	github.com/creack/pty v1.1.21
 	github.com/cretz/bine v0.2.0
 	github.com/duosecurity/duo_universal_golang v1.0.3
@@ -58,7 +59,6 @@ require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/aybabtme/rgbterm v0.0.0-20170906152045-cc83f3b3ce59 // indirect
 	github.com/beevik/etree v1.4.0 // indirect
-	github.com/bluekeyes/go-gitdiff v0.7.3 // indirect
 	github.com/calebcase/tmpfile v1.0.3 // indirect
 	github.com/crewjam/httperr v0.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect

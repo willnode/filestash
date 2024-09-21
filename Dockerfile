@@ -1,15 +1,14 @@
 # STEP1: CLONE THE CODE
 FROM alpine:latest as builder_prepare
 WORKDIR /home/
-RUN apk add git && \
-    git clone --depth 1 https://github.com/mickael-kerjean/filestash
+COPY . .
 
 # STEP2: BUILD THE FRONTEND
 FROM node:18-alpine AS builder_frontend
 WORKDIR /home/
 COPY --from=builder_prepare /home/filestash/ ./
-RUN apk add make git gzip brotli && \
-    npm install --legacy-peer-deps && \
+RUN apk add make git gzip brotli yarn && \
+    yarn && \
     make build_frontend && \
     cd public && make compress
 

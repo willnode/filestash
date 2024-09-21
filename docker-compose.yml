@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    container_name: filestash
+    image: machines/filestash
+    build: .
+    restart: always
+    environment:
+    - APPLICATION_URL=
+    ports:
+    - "8334:8334"
+    volumes:
+    - filestash:/app/data/state/
+
+volumes:
+    filestash: {}
