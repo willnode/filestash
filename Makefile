@@ -1,4 +1,5 @@
 all:
+	yarn --immutable
 	make build_init
 	make build_frontend
 	make build_backend
